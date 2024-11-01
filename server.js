@@ -1,4 +1,9 @@
-const PORT = 5050;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+const express = require("express")
+const UserRoute = require("./routes/userRoutes")
+const errorHandler = require("./middleware/errorHandler.js")
+
+const app = express()
+const PORT = 5050
+app.use(express.json())
+
+use("/resource".UserRoute)
